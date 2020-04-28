@@ -1,11 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { useGrid } from "./hooks/grid";
+import { useTiming } from "./hooks/timing";
+import { Grid } from "./grid";
 function App() {
+  const { gridState, getNextGridState } = useGrid();
+  useTiming(getNextGridState);
   return (
     <div className="App">
-      <header className="App-header">
+      <Grid dimensions={[6, 6]} points={gridState} />
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
@@ -18,7 +23,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
