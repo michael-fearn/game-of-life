@@ -77,13 +77,17 @@ export const getNextState = (dict: CoordDict<boolean>) => {
 export const useGrid = () => {
   const [gridState, setGridState] = useState(
     coordsToDict([
-      [2, 2],
-      [2, 3],
-      [2, 4],
+      [2, 11],
+      [2, 12],
+      [2, 13],
 
-      [3, 1],
-      [3, 2],
-      [3, 3],
+      [3, 10],
+      [3, 11],
+      [3, 12],
+
+      [6, 10],
+      [6, 11],
+      [6, 12],
     ])
   );
 

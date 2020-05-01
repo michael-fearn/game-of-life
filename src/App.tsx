@@ -9,7 +9,7 @@ function App() {
   useTiming(getNextGridState);
   return (
     <div className="App">
-      <Grid dimensions={[6, 6]} points={gridState} />
+      <Grid dimensions={[30, 30]} points={gridState} />
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
